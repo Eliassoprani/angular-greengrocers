@@ -1,0 +1,18 @@
+<div id="store">
+  <h1>Greengrocers</h1>
+  <div class="store-filter-buttons">
+    <p>Filter</p>
+    <button (click)="showFruits()">Show Fruits</button>
+    <button (click)="showVegetables()">Show Vegetables</button>
+    <button (click)="showAll()">Show All items</button>
+    <p>Sort</p>
+    <button (click)="sortByName()">Sort by Name</button>
+    <button (click)="sortByPrice()">Sort by Price</button>
+  </div>
+  <div ngClass="store-items">
+  <app-store-item
+    *ngFor="let item of filteredItems"
+    [item]="item"
+    (add)="addItem($event)"
+  ></app-store-item>
+  </div></div>

@@ -1,0 +1,16 @@
+<main id="cart">
+  <h2>Your Cart</h2>
+  <ng-container *ngIf="items.length === 0; else cartItems">
+    <p>Cart is empty</p>
+  </ng-container>
+  
+  <ng-template #cartItems>
+    <app-cart-item
+      *ngFor="let item of items"
+      [item]="item"
+      (add)="addItem($event)"
+      (remove)="removeItem($event)"
+    ></app-cart-item>
+  </ng-template>
+    <app-total></app-total>
+</main>

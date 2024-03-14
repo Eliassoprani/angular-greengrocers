@@ -1,0 +1,13 @@
+<ng-template [ngIf]="item">
+  <div ngClass="cartItem">
+    <img
+      ngClass="fruit-img"
+      src="{{ 'assets/icons/' + item.item.id + '.svg' }}"
+    />
+    <p ngClass="item-name">{{ item.item.name }}</p>
+
+    <button ngClass="remove" (click)="toggleRemove()">-</button>
+    <p ngClass="quantity">{{ item.quantity }}</p>
+    <button ngClass="add" (click)="toggleAdd()">+</button>
+  </div>
+</ng-template>

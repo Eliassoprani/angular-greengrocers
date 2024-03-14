@@ -1,0 +1,13 @@
+.store-filter-buttons{
+
+}
+
+#store{
+  height: 100%
+}
+
+.store-items{
+  display: flex;
+  flex-wrap: wrap;
+  max-width:100%;
+}

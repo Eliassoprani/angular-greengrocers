@@ -1,0 +1,8 @@
+<ng-template [ngIf]="item">
+  <div ngClass="item">
+  <img ngClass="fruit-img" src='{{ "assets/icons/" + item.id + ".svg" }}'/>
+  <button
+    (click)="toggleAdd()"
+  >ADD TO CART</button>
+</div>
+</ng-template>
